@@ -1,0 +1,137 @@
+.auth-form {
+  max-width: 396px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 70px;
+  height: 100vh;
+}
+
+.auth-form__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 37px 0 40px;
+}
+
+.auth-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 396px;
+}
+
+.form__label {
+  color: #8b8b8b;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.form__input {
+  border-radius: 8px;
+  background-color: #2f2f2f;
+  color: #fff;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  padding: 15px;
+}
+
+.form__input:-webkit-autofill {
+  transition: all 5000s ease-in-out;
+}
+
+.form__input-error {
+  color: #ee3465;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  min-height: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.auth-form__button {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 3px;
+  background: #4285f4;
+  min-height: 45px;
+  width: 100%;
+  margin-top: 69px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+.auth-form__container {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: center;
+  align-items: baseline;
+}
+.auth-form__bottom {
+  color: #8b8b8b;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 190px;
+  min-height: 17px;
+}
+
+.auth-form__link {
+  color: #4285f4;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 90px;
+}
+
+@media screen and (max-width: 480px) {
+  .auth-form {
+    
+    align-items: center;
+  }
+  
+
+  .auth-form__title {
+  }
+
+  .auth-form__fieldset {
+    width: 260px;
+  }
+  .auth-form__button {
+    
+    width: 260px;
+    font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+   
+  }
+}
