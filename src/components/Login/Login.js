@@ -8,7 +8,7 @@ import "./Login.css";
 function Login(props) {
   return (
     <AuthForm
-      name="loginForm"
+      name="login"
       title="Рады видеть!"
       buttonText="Войти"
       bottomText="Ещё не зарегистрированы?"

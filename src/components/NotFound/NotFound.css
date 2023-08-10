@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  
 }
 
 .not-found__title {
@@ -31,6 +31,7 @@
   font-weight: 400;
   line-height: normal;
   margin-top: 184px;
+  margin-bottom: 60px;
 }
 
 @media screen and (max-width: 767px) {
@@ -55,5 +56,7 @@
     font-weight: 400;
     line-height: normal;
     margin-top: 284px;
+    margin-bottom: 30px;
+   
   }
 }

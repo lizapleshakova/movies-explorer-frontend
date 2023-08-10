@@ -13,6 +13,7 @@ import Register from "../Register/Register";
 import Profile from "../Profile/Profile";
 
 
+
 function App() {
   return (
     <div className="page">
@@ -24,6 +25,7 @@ function App() {
       <Route path="/signin" element={<Login />} />
       <Route path="/signup" element={<Register />} />
       <Route path="/profile" element={<Profile />} />
+     
       
 
     </Routes>

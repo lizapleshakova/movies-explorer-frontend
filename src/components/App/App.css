@@ -8,8 +8,7 @@
   flex-direction: column;
   margin: 0 auto;
   min-height: 100vh;
-  min-width: 320px;
-  max-width: 1280px;
+  min-width: 300px;
    font-family: 'Inter', Arial, sans-serif;
   /* сглаживание шрифтов */
   -moz-osx-font-smoothing: grayscale;
@@ -24,10 +23,6 @@
   color: #FFFFFF;
  }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}  */
 
 .button {
   transition: opacity 0.8s ease-in-out;

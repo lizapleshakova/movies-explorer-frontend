@@ -6,7 +6,7 @@ import "./Register.css";
 function Register(props) {
   return (
     <AuthForm
-      name="loginForm"
+      name="register"
       title="Добро пожаловать!"
       buttonText="Зарегистрироваться"
       bottomText="Уже зарегистрированы?"
@@ -24,7 +24,7 @@ function Register(props) {
           maxLength="60"
           required
           placeholder="Имя"
-        //   autoComplete="off"
+          autoComplete="off"
         />
         <span className="form__input-error name-input-error"></span>
         <label className="form__label">E-mail</label>
@@ -37,7 +37,7 @@ function Register(props) {
           maxLength="60"
           required
           placeholder="E-mail"
-        //   autoComplete="off"
+          autoComplete="off"
         />
         <span className="form__input-error email-input-error"></span>
 
@@ -51,7 +51,7 @@ function Register(props) {
           maxLength="60"
           required
           placeholder=""
-        //   autoComplete="off"
+          autoComplete="off"
         />
         <span className="form__input-error password-input-error">Что-то пошло не так...</span>
     </AuthForm> 

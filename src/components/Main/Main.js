@@ -20,8 +20,10 @@ function Main(loggedIn) {
         <Portfolio />
       </main>
       <Footer />
+     
     </>
   );
 }
+
 
 export default Main;
