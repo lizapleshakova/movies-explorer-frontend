@@ -21,14 +21,14 @@ function Header({ loggedIn }) {
     <header className="header">
       {!loggedIn ? (
         <div className="header__container">
-          <Link to="/" className="header__link link">
-            <img src={headerLogo} alt="Логотип" className="link header__logo" />
+          <Link to="/" className="link header__link">
+            <img src={headerLogo} alt="Логотип" className="header__logo" />
           </Link>
           <nav className="header__user-links">
-            <Link to="/signup" className="header__link-signup link">
+            <Link to="/signup" className="link header__link-signup">
               Регистрация
             </Link>
-            <Link to="/signin" className="header__link-signin link">
+            <Link to="/signin" className="link header__link-signin">
               Войти
             </Link>
           </nav>
@@ -36,7 +36,7 @@ function Header({ loggedIn }) {
       ) : (
         <div className="header__container">
           <nav className="header__movies">
-            <Link to="/" className="header__link link">
+            <Link to="/" className="link header__link">
               <img src={headerLogo} alt="Логотип" className="header__logo" />
             </Link>
             <div className="header__islogged">
@@ -44,8 +44,8 @@ function Header({ loggedIn }) {
                 <NavLink
                   to="/movies"
                   className={({ isActive }) =>
-                    `link  header__navigation-link ${
-                      isActive ? "header__navigation-link_active" : ""
+                    `link header__navigation-movies ${
+                      isActive ? "header__navigation-movies_active" : ""
                     }`
                   }
                 >
@@ -54,8 +54,8 @@ function Header({ loggedIn }) {
                 <NavLink
                   to="/saved-movies"
                   className={({ isActive }) =>
-                    `link header__navigation-link ${
-                      isActive ? "header__navigation-link_active" : ""
+                    `link header__navigation-movies ${
+                      isActive ? "header__navigation-movies_active" : ""
                     }`
                   }
                 >
@@ -70,7 +70,7 @@ function Header({ loggedIn }) {
 
           <div className="sidebar">
             <div
-              className={`sidebar__button button ${
+              className={`sidebar__button-open button ${
                 isSideBarOpen ? "sidebar__button_active" : ""
               }`}
               onClick={handleButtonClick}

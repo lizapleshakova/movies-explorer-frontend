@@ -1,7 +1,6 @@
 import React from "react";
 import AuthForm from "../AuthForm/AuthForm";
 import "../AuthForm/AuthForm.css";
-import "./Register.css";
 
 function Register(props) {
   return (

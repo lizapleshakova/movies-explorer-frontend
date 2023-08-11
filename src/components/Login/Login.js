@@ -3,8 +3,6 @@ import AuthForm from "../AuthForm/AuthForm";
 import "../AuthForm/AuthForm.css";
 
 
-import "./Login.css";
-
 function Login(props) {
   return (
     <AuthForm
