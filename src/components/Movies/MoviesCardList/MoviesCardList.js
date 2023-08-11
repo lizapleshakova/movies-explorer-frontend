@@ -6,7 +6,12 @@ import { useLocation } from "react-router-dom";
 function MoviesCardList({ movies }) {
   const { pathname } = useLocation();
   return (
-    <section className="movies-cardlist">
+    <section 
+    className={`${
+      pathname !== "/saved-movies" ? "movies-cardlist" : "saved-movies-cardlist"
+      
+    }`}>
+    
       <div className="movies-cardlist__container">
         {movies.map((movie) => {
           return (
@@ -18,7 +23,7 @@ function MoviesCardList({ movies }) {
           );
         })}
       </div>
-      <div className="movies-cardlist__btn-container">
+    
         <button
           className={`button movies-cardlist__more-btn ${
             pathname !== "/saved-movies" ? "" : "movies-cardlist__more-btn_none"
@@ -27,7 +32,7 @@ function MoviesCardList({ movies }) {
         >
           Ещё
         </button>
-      </div>
+     
     </section>
   );
 }

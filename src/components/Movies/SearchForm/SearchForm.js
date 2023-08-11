@@ -21,7 +21,7 @@ function SearchForm() {
             <img src={searchButton} className="search__icon" alt="Искать" />
           </button>
         </div>
-        <div className="search_shorts">
+        <div className="search__shorts">
             <label className="search__label">
                 <input className="search__checkbox" type="checkbox"/>
                 <span className="search__checkbox-span"></span>

@@ -14,46 +14,46 @@ function Register(props) {
       linkText="Войти"
     >
 
-<label className="form__label">Имя</label>
+<label className="auth-form__label">Имя</label>
         <input
           type="text"
           name="name"
           id="name"
-          className="form__input form__input_form_name input"
+          className="auth-form__input auth-form__input_form_name input"
           minLength="2"
           maxLength="60"
           required
           placeholder="Имя"
           autoComplete="off"
         />
-        <span className="form__input-error name-input-error"></span>
+        <span className="auth-form__input-error name-input-error"></span>
         <label className="form__label">E-mail</label>
         <input
           type="email"
           name="email"
           id="email"
-          className="form__input form__input_form_email input"
+          className="auth-form__input auth-form__input_form_email input"
           minLength="2"
           maxLength="60"
           required
           placeholder="E-mail"
           autoComplete="off"
         />
-        <span className="form__input-error email-input-error"></span>
+        <span className="auth-form__input-error email-input-error"></span>
 
-        <label className="form__label">Пароль</label>
+        <label className="auth-form__label">Пароль</label>
         <input
           type="password"
           name="password"
           id="paasword"
-          className="form__input form__input_form_password input"
+          className="auth-form__input auth-form__input_form_password input"
           minLength="2"
           maxLength="60"
           required
           placeholder=""
           autoComplete="off"
         />
-        <span className="form__input-error password-input-error">Что-то пошло не так...</span>
+        <span className="auth-form__input-error password-input-error">Что-то пошло не так...</span>
     </AuthForm> 
   );
 }

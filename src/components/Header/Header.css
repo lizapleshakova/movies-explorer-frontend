@@ -94,7 +94,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   text-align: center;
 }
 
@@ -109,7 +109,7 @@
   padding-left: 64px;
 }
 
-.navigation__link-profile {
+.header__navigation-profile{
   border-radius: 20px;
   background: #313131;
   text-align: center;
@@ -122,14 +122,14 @@
   height: 32px;
 }
 
-.navigation__link {
+.header__navigation-link {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
 }
 
-.navigation__link_active {
+.header__navigation-link_active {
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
@@ -147,7 +147,11 @@
   line-height: 32px;
   width: 100px;
   height: 32px;
-  margin: 0 0 90px;
+  margin: 0;
+}
+.sidebar__navigation {
+  padding: 159px 0;
+  gap: 24px;
 }
 
 @media screen and (max-width: 768px) {
@@ -169,18 +173,17 @@
     width: 520px;
     height: 100vh;
     background-color: #202020;
-    z-index: 1;
-    right: -100%;
-    transition: right 1s;
-    /* transform: translateX(100%);
-    transition: all .8s ease-in-out; */
+    z-index: 2;
+    transform: translateX(520px);
+    transition: all .8s ease-in-out;
+
     align-items: center;
   }
   .header__islogged {
     display: none;
     
   }
-  .navigation__link-profile {
+  .header__navigation-profile {
     display: none;
   }
   .sidebar__button {
@@ -191,17 +194,15 @@
     right: 0;
   }
   .sidebar__container_active {
-    right: 0;
-    /* transform: translateX(0);  */
+    transform: translateX(-450px);
   }
+
   .sidebar__button-close {
     position: absolute;
     top: 22px;
     right: 22px;
   }
-  .sidebar__navigation {
-    padding: 159px 0;
-  }
+ 
 }
 
 @media screen and (max-width: 600px) {
@@ -228,6 +229,10 @@
     font-weight: 500;
     line-height: 26px;
   }
+  .sidebar__navigation {
+    padding: 153px 20px 153px 5px;
+    gap: 19px;
+  }
 
   .header__link-signin {
     width: 54px;
@@ -236,5 +241,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: 26px;
+  }
+  .sidebar__button {
+    width: 40px;
+    height: 43px;
+  }
+  .sidebar__link-profile {
+   padding-right: 8px;
+    margin-bottom: 42px;
   }
 }

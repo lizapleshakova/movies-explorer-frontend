@@ -6,7 +6,7 @@
 }
 
 .footer__title {
-  width: 89.0625%; 
+  width: 89.0625%;
   color: #8b8b8b;
   text-align: center;
   font-size: 13px;
@@ -19,7 +19,7 @@
 }
 
 .footer__container {
-  width: 89.0625%; 
+  width: 89.0625%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 768px) {
   .footer__title {
-    width: 94.5%; 
+    width: 94.5%;
   }
   .footer__container {
     width: 94.5%;
@@ -96,12 +96,11 @@
     font-weight: 400;
     line-height: normal;
   }
-} 
+}
 
 @media screen and (max-width: 440px) {
   .footer {
     max-width: 300px;
     box-sizing: border-box;
-
   }
 }

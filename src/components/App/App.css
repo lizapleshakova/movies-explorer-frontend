@@ -1,7 +1,6 @@
 @import url(../../vendor/normalize.css);
 @import url(../../vendor/fonts/fonts.css);
 
-
 .page {
   width: 100%;
   display: flex;
@@ -22,7 +21,6 @@
   background-color: #202020;
   color: #FFFFFF;
  }
-
 
 .button {
   transition: opacity 0.8s ease-in-out;
@@ -47,5 +45,4 @@
 
 .input:focus {
     outline: 1px solid #DADADA;
-  
   }

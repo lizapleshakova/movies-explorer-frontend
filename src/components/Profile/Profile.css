@@ -4,9 +4,10 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  max-width: 410px;
-  padding-top: 50px;
+  width: 410px;
+  padding-top: 53px;
 }
+
 
 .profile__title {
   font-size: 24px;
@@ -108,4 +109,31 @@
   font-weight: 400;
   line-height: normal;
   border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    padding-top: 213px;
+  }
+  .profile__title {
+    padding-bottom: 80px;
+  }
+  
+  .profile__btn-container {
+    padding-top: 169px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile {
+    width: 260px;
+    padding-top: 55px;
+  }
+  .profile__title {
+    padding-bottom: 64px;
+  }
+  
+  .profile__btn-container {
+    padding-top: 339px;
+  }
 }

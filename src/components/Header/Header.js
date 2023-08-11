@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 import { NavLink } from "react-router-dom";
 
+
 function Header({ loggedIn }) {
   const [isSideBarOpen, setSideBarOpen] = useState(false);
 
@@ -43,8 +44,8 @@ function Header({ loggedIn }) {
                 <NavLink
                   to="/movies"
                   className={({ isActive }) =>
-                    `link navigation__link ${
-                      isActive ? "navigation__link_active" : ""
+                    `link  header__navigation-link ${
+                      isActive ? "header__navigation-link_active" : ""
                     }`
                   }
                 >
@@ -53,8 +54,8 @@ function Header({ loggedIn }) {
                 <NavLink
                   to="/saved-movies"
                   className={({ isActive }) =>
-                    `link navigation__link ${
-                      isActive ? "navigation__link_active" : ""
+                    `link header__navigation-link ${
+                      isActive ? "header__navigation-link_active" : ""
                     }`
                   }
                 >
@@ -62,13 +63,12 @@ function Header({ loggedIn }) {
                 </NavLink>
               </nav>
             </div>
-            <Link className="navigation__link-profile link" to={"/profile"}>
+            <Link className="header__navigation-profile link" to={"/profile"}>
               Аккаунт
             </Link>
           </nav>
 
-          {/* SideBar */}
-          <div className="header__sidebar">
+          <div className="sidebar">
             <div
               className={`sidebar__button button ${
                 isSideBarOpen ? "sidebar__button_active" : ""
@@ -81,6 +81,7 @@ function Header({ loggedIn }) {
                 alt="Открыть меню"
               />
             </div>
+
             <div
               className={`sidebar__container ${
                 isSideBarOpen ? "sidebar__container_active" : ""

@@ -2,7 +2,6 @@
   display: flex;
   max-width: 1140px;
   margin: 0 auto;
-  
   padding: 60px 0 40px;
   border-bottom: 1px solid #424242;
 }
@@ -45,7 +44,7 @@
   padding: 0;
 }
 
-.search_shorts {
+.search__shorts {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +107,6 @@ input:checked + .search__checkbox-span:before {
   line-height: 18px;
 }
 
-
 @media screen and (max-width: 1170px) {
   .search {
     margin: 0 20px;
@@ -127,7 +125,7 @@ input:checked + .search__checkbox-span:before {
     
   @media screen and (max-width: 320px) {
     .search {
-      padding: 62px 0 40px;
+      padding: 64px 0 43px;
       margin: 0 14px;
     }
     .search__input {
@@ -137,7 +135,7 @@ input:checked + .search__checkbox-span:before {
     .search__form {
       gap: 46px;
     }
-    .search_shorts {
+    .search__shorts {
       
       gap: 15px;
       padding-left: 0;

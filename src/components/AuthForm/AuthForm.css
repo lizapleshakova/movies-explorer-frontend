@@ -21,7 +21,7 @@
   width: 396px;
 }
 
-.form__label {
+.auth-form__label {
   color: #8b8b8b;
   font-family: Inter;
   font-size: 10px;
@@ -32,7 +32,7 @@
   width: 100%;
 }
 
-.form__input {
+.auth-form__input {
   border-radius: 8px;
   background-color: #2f2f2f;
   color: #fff;
@@ -53,7 +53,7 @@
   transition: all 5000s ease-in-out;
 } */
 
-.form__input-error {
+.auth-form__input-error {
   color: #ee3465;
   font-family: Inter;
   font-size: 10px;
@@ -80,13 +80,11 @@
   margin-top: 69px;
   border: none;
   outline: none;
-  
 }
 
 .auth-form__button_type-login {
   margin-top: 159px;
 }
-
 
 .auth-form__container {
   display: flex;
