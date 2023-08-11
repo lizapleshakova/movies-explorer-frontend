@@ -33,6 +33,7 @@
   font-weight: 400;
   line-height: 18px;
   padding: 16px 20px;
+  outline: none;
 }
 
 .search__button {
@@ -107,9 +108,10 @@ input:checked + .search__checkbox-span:before {
   line-height: 18px;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
   .search {
-    margin: 0 20px;
+    width: 95%;
+    margin: 0 auto;
   }
   }
 
@@ -128,8 +130,12 @@ input:checked + .search__checkbox-span:before {
       padding: 64px 0 43px;
       margin: 0 14px;
     }
+    .search__container {
+      max-width: 292px;
+      
+    }
     .search__input {
-    
+     
       padding: 14px 13px;
     }
     .search__form {

@@ -11,7 +11,7 @@ function SearchForm() {
             type="text"
             name="search-input"
             id="search-input"
-            className="search__input input"
+            className="search__input"
             minLength="2"
             maxLength="60"
             required

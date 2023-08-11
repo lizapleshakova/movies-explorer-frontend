@@ -78,6 +78,7 @@
 
 .about-project__scale-title:first-child {
   background-color: #3ddc84;
+  color: #000;
   grid-area: 1 / 1 / 2 / 2;
 }
 .about-project__scale-text {
@@ -97,7 +98,8 @@
 
 @media screen and (max-width: 1240px) {
   .about-project {
-    margin: 0 20px;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -127,9 +129,9 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .about-project {
-    width: 86.98%;
+    width: 90%;
     margin: 0 auto;
   }
 }

@@ -42,7 +42,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1240px) {
   .movies-cardlist__container {
     max-width: 708px;
     grid-template-columns: repeat(auto-fit, 339px);
@@ -62,7 +62,7 @@
   }
 }
 
-@media screen and (max-width: 738px) {
+@media screen and (max-width: 766px) {
  
   .movies-cardlist__container {
     max-width: 320px;

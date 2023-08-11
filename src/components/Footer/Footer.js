@@ -29,6 +29,7 @@ function Footer() {
               GitHub
             </Link>
           </li>
+          
         </ul>
       </div>
     </footer>

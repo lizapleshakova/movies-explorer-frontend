@@ -168,14 +168,16 @@
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
-    top: 0;
-    bottom: 0;
     width: 520px;
     height: 100vh;
+    top: 0;
+    bottom: 0;
     background-color: #202020;
     z-index: 2;
     transform: translateX(520px);
     transition: all .8s ease-in-out;
+   
+
 
     align-items: center;
   }
@@ -208,6 +210,9 @@
 @media screen and (max-width: 600px) {
   .sidebar__container {
     width: 320px;
+  }
+  .sidebar__container_active {
+    transform: translateX(-265px);
   }
 }
 @media screen and (max-width: 340px) {

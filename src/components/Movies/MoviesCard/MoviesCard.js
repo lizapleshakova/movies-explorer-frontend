@@ -9,7 +9,7 @@ function MoviesCard(movie) {
 
     return (
         <article className="movies-card">
-        <img src={movie.image} alt={movie.nameRu} className="movies-card__image" />
+        <img src={movie.image}  alt={movie.nameRU} className="movies-card__image" />
 
         {/* <button className="movies-card__save button" type="button">Сохранить</button> */}
 
