@@ -1,0 +1,152 @@
+.search {
+  display: flex;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 60px 0 40px;
+  border-bottom: 1px solid #424242;
+}
+
+.search__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 0 auto;
+}
+
+.search__container {
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.search__input {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #2f2f2f;
+  color: #8b8b8b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 16px 20px;
+  outline: none;
+}
+
+.search__button {
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search__shorts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-left: 3px;
+}
+
+.search__label {
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+  height: 14px;
+  width: 34px;
+  cursor: pointer;
+}
+
+.search__checkbox {
+  display: none;
+}
+
+.search__checkbox-span {
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 16px;
+  border-radius: 36px;
+  background-color: #c4c4c4;
+  inset: 0;
+  transform: scale(1);
+  transition: background-color 0.3s ease;
+}
+
+.search__checkbox-span:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: #f5f5f5;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.search__checkbox:checked + .search__checkbox-span:before {
+  background-color: #ffffff;
+}
+.search__checkbox:checked + .search__checkbox-span {
+  background-color: #2be080;
+}
+
+input:checked + .search__checkbox-span:before {
+  transform: translateX(20px);
+}
+
+.search__choice {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+  .search {
+    width: 95%;
+    margin: 0 auto;
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+    .search {
+      padding: 57px 0 40px;
+    }
+    .search__form {
+      gap: 40px;
+    }
+    }
+
+    
+  @media screen and (max-width: 320px) {
+    .search {
+      padding: 64px 0 43px;
+      margin: 0 14px;
+    }
+    .search__container {
+      max-width: 292px;
+      
+    }
+    .search__input {
+     
+      padding: 14px 13px;
+    }
+    .search__form {
+      gap: 46px;
+    }
+    .search__shorts {
+      
+      gap: 15px;
+      padding-left: 0;
+    }
+    .search__choice {
+      font-size: 11px;
+    }
+    }
