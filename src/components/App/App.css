@@ -44,5 +44,5 @@
 }
 
 .input:focus {
-    outline: 1px solid #DADADA;
+    border-bottom: 1px solid #DADADA;
   }

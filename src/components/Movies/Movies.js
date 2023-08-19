@@ -9,7 +9,7 @@ import { movieArr } from "../../utils/arr";
 function Movies(loggedIn) {
   return (
     <>
-      <Header loggedIn={loggedIn} />
+      {/* <Header loggedIn={loggedIn} /> */}
       <main className="content">
         <SearchForm />
         <MoviesCardList movies={movieArr} />

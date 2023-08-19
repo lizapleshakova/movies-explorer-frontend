@@ -8,7 +8,7 @@ import { savedMovieArr } from "../../utils/arr";
 function SavedMovies(loggedIn) {
   return (
     <>
-      <Header loggedIn={loggedIn} />
+      {/* <Header loggedIn={loggedIn} /> */}
       <main className="content">
         <SearchForm />
         <MoviesCardList movies={savedMovieArr} />

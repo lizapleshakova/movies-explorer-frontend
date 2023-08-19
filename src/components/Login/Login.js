@@ -1,9 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import AuthForm from "../AuthForm/AuthForm";
 import "../AuthForm/AuthForm.css";
+import useFormWithValidation from "../../hooks/useFormWithValidation";
 
 
-function Login(props) {
+function Login({ handleLogin }) {
+  const { values, handleChange, errors, isValid, resetForm, setValues } =
+  useFormWithValidation();
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    handleLogin(values.email, values.password);
+    resetForm();
+  }
   return (
     <AuthForm
       name="login"
@@ -12,7 +22,10 @@ function Login(props) {
       bottomText="Ещё не зарегистрированы?"
       link='/signup'
       linkText="Регистрация"
+      onSubmit={handleSubmit}
+      disabled
     >
+      
         <label className="auth-form__label">E-mail</label>
         <input
           type="email"
@@ -24,8 +37,10 @@ function Login(props) {
           required
           placeholder="E-mail"
           autoComplete="off"
+          value={values.email || ""}
+          onChange={handleChange}
         />
-        <span className="auth-form__input-error email-input-error"></span>
+        <span className="auth-form__input-error email-input-error">{errors.email}</span>
 
         <label className="auth-form__label">Пароль</label>
         <input
@@ -38,8 +53,10 @@ function Login(props) {
           required
           placeholder=""
           autoComplete="off"
+          value={values.password || ""}
+          onChange={handleChange}
         />
-        <span className="auth-form__input-error password-input-error"></span>
+        <span className="auth-form__input-error password-input-error">{errors.password}</span>
     </AuthForm> 
   );
 }

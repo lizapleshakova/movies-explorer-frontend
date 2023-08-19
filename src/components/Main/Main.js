@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer";
 function Main(loggedIn) {
   return (
     <>
-      <Header loggedIn={!loggedIn} />
+      {/* <Header loggedIn={loggedIn} /> */}
       <main className="content">
         <Promo />
         <NavTab />

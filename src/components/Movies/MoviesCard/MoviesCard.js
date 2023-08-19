@@ -1,13 +1,20 @@
 import React from "react";
 import "./MoviesCard.css";
 import { useLocation } from "react-router-dom";
+import { useState} from "react";
 
 
 
 function MoviesCard(movie) {
     const { pathname } = useLocation();
-
-    return (
+    
+    const calculateDuration = (time) => {
+        const min = time % 60;
+        const hours = Math.floor(min / 60);
+        return `${hours}ч ${min}м`;
+    }
+    
+     return (
         <article className="movies-card">
         <img src={movie.image}  alt={movie.nameRU} className="movies-card__image" />
 
@@ -16,7 +23,7 @@ function MoviesCard(movie) {
         <button className={`button movies-card__save ${pathname !== "/saved-movies" ? "" : "movies-card__delete"}`} type="button"></button>
         <div className="movies-card__container">
             <h2 className="movies-card__title">{movie.nameRU}</h2>
-            <p className="movies-card__duration">{movie.duration}</p>
+            <p className="movies-card__duration">{calculateDuration(movie.duration)}</p>
         </div>
          </article >
     );

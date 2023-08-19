@@ -137,6 +137,11 @@
     margin-top: 157px;
   }
 
+  .auth-form__button:disabled {
+    background-color: #F8F8F8;
+    color: #C2C2C2;
+  }
+
   .auth-form__button_type-login {
     margin-top: 248px;
   }
