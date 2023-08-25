@@ -1,4 +1,6 @@
 макет: dark-2
 
-pleshakova.nomoredomains.xyz
+pull requests: https://github.com/lizapleshakova/movies-explorer-frontend/pull/2
+
+Проект: pleshakova.nomoredomains.xyz
 
