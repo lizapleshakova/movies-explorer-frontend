@@ -1,11 +1,11 @@
 import React from "react";
 import "./InfoTooltip.css";
-import Succses from "../../images/succses.png";
-import Fail from "../../images/fail.png";
+// import Succses from "../../images/succses.png";
+// import Fail from "../../images/fail.png";
 
-function InfoTooltip({ name, isOpen, onClose, isSuccess }) {
+function InfoTooltip({ isOpen, onClose, statusTooltip }) {
   return (
-    <div className={`popup popup_type_${name} ${isOpen ? `popup_opened` : ""}`}>
+    <div className={`popup ${isOpen ? `popup_opened` : ""}`}>
       <div className="popup__container popup__container-infotooltip">
         <button
           onClick={onClose}
@@ -15,13 +15,15 @@ function InfoTooltip({ name, isOpen, onClose, isSuccess }) {
         ></button>
         <img
           className="popup__img-infotooltip"
-          src={isSuccess ? Succses : Fail}
+          src={statusTooltip.image}
           alt="Подсказака"
         />
         <h2 className="popup__title popup__title-infotooltip">
-          {isSuccess
+        {statusTooltip.message}
+
+          {/* {isSuccess
             ? "Вы успешно зарегистрировались!"
-            : "Что-то пошло не так! Попробуйте еще раз."}
+            : "Что-то пошло не так! Попробуйте еще раз."} */}
         </h2>
       </div>
     </div>

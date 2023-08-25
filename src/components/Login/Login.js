@@ -1,12 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import AuthForm from "../AuthForm/AuthForm";
 import "../AuthForm/AuthForm.css";
 import useFormWithValidation from "../../hooks/useFormWithValidation";
 
 
 function Login({ handleLogin }) {
-  const { values, handleChange, errors, isValid, resetForm, setValues } =
+  const { values, handleChange, errors, isValid, resetForm } =
   useFormWithValidation();
 
   function handleSubmit(evt) {
@@ -23,7 +22,7 @@ function Login({ handleLogin }) {
       link='/signup'
       linkText="Регистрация"
       onSubmit={handleSubmit}
-      disabled
+      isValid={isValid}
     >
       
         <label className="auth-form__label">E-mail</label>

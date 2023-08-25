@@ -68,7 +68,7 @@ function Register({ onRegister }) {
         name="password"
         id="paasword-register"
         className="auth-form__input auth-form__input_form_password input"
-        minLength="2"
+        minLength="8"
         maxLength="60"
         required
         placeholder=""

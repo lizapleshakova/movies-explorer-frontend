@@ -23,6 +23,18 @@
   padding: 80px 0 75px;
 }
 
+.movies-cardlist__error {
+    width: 89.0625%;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 auto;
+    padding: 80px 0 75px;
+}
+
 .movies-cardlist__more-btn {
   width: 320px;
   height: 36px;

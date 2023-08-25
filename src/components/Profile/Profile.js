@@ -87,7 +87,7 @@ function Profile({ onUpdateUser, onSignOut, webError, webSuces }) {
         <span className="profile__error">{errors.email}</span>
       </form>
       <div className="profile__btn-container">
-        <span className="profile__error profile__error-btn">Что-то пошло не так</span>
+        {/* <span className="profile__error profile__error-btn">Что-то пошло не так</span> */}
         {statusBtn ? (
           <button
             className="profile__btn-save button"
@@ -122,3 +122,6 @@ function Profile({ onUpdateUser, onSignOut, webError, webSuces }) {
 }
 
 export default Profile;
+
+
+
