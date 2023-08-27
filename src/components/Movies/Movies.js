@@ -15,7 +15,7 @@ function Movies({
 }) {
   const [cardList, setCardList] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const [filteredShorts, setFilteredShorts] = useState(false);
+   const [filteredShorts, setFilteredShorts] = useState(JSON.parse(localStorage.getItem("filteredShorts")));
 
   const [searchQuery, setSearchQuery] = useState("");
   const [searchDone, setSearchDone] = useState(false);

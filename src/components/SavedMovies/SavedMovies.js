@@ -10,7 +10,7 @@ import { SEARCH_ERRORS, SHORT_FILM_DURATION } from "../../utils/constatns";
 
 const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr, handleSavedMovieDelete }) => {
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const [filteredShorts, setFilteredShorts] = useState(false);
+  const [filteredShorts, setFilteredShorts] = useState(JSON.parse(localStorage.getItem("filteredShorts")));
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null); // сброс ошибок

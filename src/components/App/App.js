@@ -52,9 +52,9 @@ function App() {
 
   const handleDeleteMovies = (movie) => {
     const savedMovie = movies.find((card) => card.id === movie.id);
-    // if (savedMovie) {
+    if (savedMovie) {
       handleSavedMovieDelete(savedMovie._id);
-    // }
+    }
   };
 
   const handleAddMovie = (movie) => {

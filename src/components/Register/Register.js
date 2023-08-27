@@ -1,21 +1,18 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import AuthForm from "../AuthForm/AuthForm";
 import useFormWithValidation from "../../hooks/useFormWithValidation";
 import "../AuthForm/AuthForm.css";
 import { REG_EMAIL, REG_NAME } from "../../utils/constatns";
 
 function Register({ onRegister }) {
-  const { values, handleChange, errors, isValid, resetForm, setValues } =
+  const { values, handleChange, errors, isValid } =
     useFormWithValidation();
 
 
   function handleSubmit(evt) {
     evt.preventDefault();
     onRegister(values.name, values.email, values.password);
-    resetForm();
   }
-
 
   return (
     <AuthForm
