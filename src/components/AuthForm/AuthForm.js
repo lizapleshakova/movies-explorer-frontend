@@ -5,6 +5,8 @@ import headerLogo from "../../images/headerLogo.svg";
 import "./AuthForm.css";
 
 function AuthForm(props) {
+
+
   return (
     <div className="page">
       <section className="auth-form">
@@ -27,7 +29,7 @@ function AuthForm(props) {
         <button
           type="submit"
           aria-label="Сохранить изменения и закрыть"
-          className={`button auth-form__button auth-form__button_type-${props.name}`}
+          className={`button auth-form__button ${!props.isValid ? 'auth-form__button_disabled' : ''}`}
           disabled={!props.isValid}
         >
           {props.buttonText}

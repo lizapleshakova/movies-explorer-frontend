@@ -26,6 +26,7 @@ function MoviesCard({
     isMovieSaved() ? "button movies-card__saved" : ""
   }`;
 
+
   const movieToDelete = () => {
     const savedMovie = sevedMoviesArr.find((movie) => card.id === movie.movieId);
     handleSavedMovieDelete(savedMovie._id);
@@ -42,7 +43,8 @@ function MoviesCard({
   };
 
   const handleDeleteSavedMovie = () => {
-    handleDeleteMovies(card);
+    handleSavedMovieDelete(card._id);
+    console.log(card);
   };
 
   return (

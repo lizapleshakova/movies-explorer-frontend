@@ -7,7 +7,7 @@ import { useMediaQuery } from "../../../hooks/useMediaQuery";
 
 const LG_ROW_CARD_COUNT = 3;
 const MD_ROW_CARD_COUNT = 2;
-const SM_ROW_CARD_COUNT = 1;
+const SM_ROW_CARD_COUNT = 2;
 
 const LG_INITIAL_CARD_COUNT = 12;
 const MD_INITIAL_CARD_COUNT = 8;
@@ -15,8 +15,8 @@ const SM_INITIAL_CARD_COUNT = 5;
 
 function MoviesCardList({ cards, sevedMoviesArr, handleAddMovie, handleSavedMovieDelete, handleDeleteMovies }) {
   const { pathname } = useLocation();
-  const isDesktop = useMediaQuery("(min-width: 1280px)");
-  const isTablet = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery("(min-width: 1240px)");
+  const isTablet = useMediaQuery("(min-width: 766px)");
 
   const cardColumnCount = isDesktop
     ? LG_ROW_CARD_COUNT
@@ -51,7 +51,7 @@ function MoviesCardList({ cards, sevedMoviesArr, handleAddMovie, handleSavedMovi
       return setVisibleCardCount(visibleCardCount + MD_ROW_CARD_COUNT);
     }
 
-    setVisibleCardCount(visibleCardCount + MD_ROW_CARD_COUNT);
+    setVisibleCardCount(visibleCardCount + SM_ROW_CARD_COUNT);
   };
   return (
     <section
@@ -71,11 +71,10 @@ function MoviesCardList({ cards, sevedMoviesArr, handleAddMovie, handleSavedMovi
         ))}
       </div>
 
-        {pathname === "/movies" && roundedVisibleCardCount < cards.length && (
+        {pathname === "/movies" && visibleCardCount < cards.length && (
         <button className="button movies-cardlist__more-btn" onClick={handleClick}>
           Еще
         </button> )}
-
     </section>
   );
 }

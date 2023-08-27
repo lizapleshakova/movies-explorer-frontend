@@ -40,6 +40,7 @@ export const SUCCSES_MESSAGES = {
 
 export const URL_MOVIE = "https://api.nomoreparties.co/";
 export const URL_MAIN_API = "https://api.pleshakova.nomoredomains.xyz";
+// export const URL_MAIN_API = "http://localhost:3000";
 export const URL_MOVIE_API = "https://api.nomoreparties.co/beatfilm-movies";
 
 export const REG_EMAIL = "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$";

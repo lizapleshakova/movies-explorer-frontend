@@ -47,11 +47,13 @@ function Movies({
   const handleFilteredShorts = (isChecked) => {
     setFilteredShorts(isChecked);
     localStorage.setItem("filteredShorts", JSON.stringify(isChecked));
+    
   };
 
   useEffect(() => {
     const savedMovies = localStorage.getItem("movies");
     const savedSearchQuery = localStorage.getItem("searchQuery");
+    
 
     if (savedMovies) {
       setCardList(JSON.parse(savedMovies));

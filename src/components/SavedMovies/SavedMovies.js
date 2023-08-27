@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 
 import { SEARCH_ERRORS, SHORT_FILM_DURATION } from "../../utils/constatns";
 
-const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr }) => {
+const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr, handleSavedMovieDelete }) => {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [filteredShorts, setFilteredShorts] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,7 +16,9 @@ const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr }) => {
   const [error, setError] = useState(null); // сброс ошибок
 
   const handleFilteredShorts = (isChecked) => {
+
     setFilteredShorts(isChecked);
+    localStorage.setItem("filteredShorts", JSON.stringify(isChecked));
   };
 
   const handleSearchQuery = (text) => {
@@ -75,6 +77,7 @@ const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr }) => {
             cards={filteredMovies}
             handleDeleteMovies={handleDeleteMovies}
             sevedMoviesArr={sevedMoviesArr}
+            handleSavedMovieDelete={handleSavedMovieDelete}
           />
         )}
       </main>

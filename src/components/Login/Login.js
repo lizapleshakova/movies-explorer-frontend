@@ -11,8 +11,9 @@ function Login({ handleLogin }) {
   function handleSubmit(evt) {
     evt.preventDefault();
     handleLogin(values.email, values.password);
-    resetForm();
+    resetForm(); 
   }
+
   return (
     <AuthForm
       name="login"

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import ProtectedRouteElement from "../ProtectedRoute/ProtectedRoute";
@@ -52,9 +52,9 @@ function App() {
 
   const handleDeleteMovies = (movie) => {
     const savedMovie = movies.find((card) => card.id === movie.id);
-    if (savedMovie) {
+    // if (savedMovie) {
       handleSavedMovieDelete(savedMovie._id);
-    }
+    // }
   };
 
   const handleAddMovie = (movie) => {
@@ -251,6 +251,7 @@ function App() {
                   handleAddMovie={handleAddMovie}
                   handleDeleteMovies={handleDeleteMovies}
                   handleSavedMovieDelete={handleSavedMovieDelete}
+               
                 />
               }
             />
@@ -264,17 +265,31 @@ function App() {
                   movies={movies}
                   sevedMoviesArr={movies}
                   handleDeleteMovies={handleDeleteMovies}
+                  handleSavedMovieDelete={handleSavedMovieDelete}
                 />
               }
             />
 
             <Route
               path="/signin"
-              element={<Login handleLogin={handleLogin} />}
+              element={
+                loggedIn ? (
+                  <Navigate to="/movies" />
+                ) : (
+                  <Login handleLogin={handleLogin}  />
+                )
+              }
             />
+
             <Route
               path="/signup"
-              element={<Register onRegister={handleRegistrate} />}
+              element={
+                loggedIn ? (
+                  <Navigate to="/movies" />
+                ) : (
+                  <Register onRegister={handleRegistrate} />
+                )
+              }
             />
 
             <Route
