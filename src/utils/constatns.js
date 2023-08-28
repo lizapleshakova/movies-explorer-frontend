@@ -60,6 +60,9 @@ export const REG_NAME = "^[A-Za-zА-Яа-яЁё \\-]+$";
 
 export const SHORT_FILM_DURATION = 40;
 
+export const DESKTOP = "(min-width: 1240px)";
+export const TABLET = "(min-width: 766px)";
+
 
 
 

@@ -11,11 +11,13 @@ function Movies({
   handleAddMovie,
   sevedMoviesArr,
   handleSavedMovieDelete,
-  handleDeleteMovies  
+  handleDeleteMovies,
+  filteredShorts, 
+  setFilteredShorts
 }) {
   const [cardList, setCardList] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
-   const [filteredShorts, setFilteredShorts] = useState(JSON.parse(localStorage.getItem("filteredShorts")));
+  
 
   const [searchQuery, setSearchQuery] = useState("");
   const [searchDone, setSearchDone] = useState(false);
@@ -47,13 +49,11 @@ function Movies({
   const handleFilteredShorts = (isChecked) => {
     setFilteredShorts(isChecked);
     localStorage.setItem("filteredShorts", JSON.stringify(isChecked));
-    
   };
 
   useEffect(() => {
     const savedMovies = localStorage.getItem("movies");
     const savedSearchQuery = localStorage.getItem("searchQuery");
-    
 
     if (savedMovies) {
       setCardList(JSON.parse(savedMovies));

@@ -8,27 +8,28 @@ import Footer from "../Footer/Footer";
 
 import { SEARCH_ERRORS, SHORT_FILM_DURATION } from "../../utils/constatns";
 
-const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr, handleSavedMovieDelete }) => {
+const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr, handleSavedMovieDelete, filteredSavedShorts, setFilteredSavedShorts}) => {
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const [filteredShorts, setFilteredShorts] = useState(JSON.parse(localStorage.getItem("filteredShorts")));
+
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null); // сброс ошибок
 
   const handleFilteredShorts = (isChecked) => {
 
-    setFilteredShorts(isChecked);
-    localStorage.setItem("filteredShorts", JSON.stringify(isChecked));
+    setFilteredSavedShorts(isChecked);
+    // localStorage.setItem("filteredShorts", JSON.stringify(isChecked));
   };
+
 
   const handleSearchQuery = (text) => {
     setSearchQuery(text);
   };
 
-  const applyFilters = (movies, filteredShorts, searchQuery) => {
+  const applyFilters = (movies, filteredSavedShorts, searchQuery) => {
     let filteredMovieList = [...movies];
 
-    if (filteredShorts) {
+    if (filteredSavedShorts) {
       filteredMovieList = filteredMovieList.filter(
         (movie) => movie.duration <= SHORT_FILM_DURATION
       );
@@ -49,11 +50,11 @@ const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr, handleSavedMo
     setError(null);
     setIsLoading(true);
 
-    const filteredMovies = applyFilters(movies, filteredShorts, searchQuery);
+    const filteredMovies = applyFilters(movies, filteredSavedShorts, searchQuery);
 
     setFilteredMovies(filteredMovies);
     setIsLoading(false);
-  }, [filteredShorts, searchQuery, movies]);
+  }, [filteredSavedShorts, searchQuery, movies]);
 
   return (
     <>
@@ -62,7 +63,7 @@ const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr, handleSavedMo
           handleMovies={handleSearchQuery}
           searchQuery={searchQuery}
           handleFilteredShorts={handleFilteredShorts}
-          filteredShorts={filteredShorts}
+          filteredSavedShorts={filteredSavedShorts}
         />
         {isLoading ? (
           <Preloader />
@@ -87,3 +88,4 @@ const SavedMovies = ({ movies, handleDeleteMovies, sevedMoviesArr, handleSavedMo
 };
 
 export default SavedMovies;
+

@@ -63,6 +63,7 @@ function SearchForm({handleMovies, searchQuery, handleFilteredShorts, filteredSh
                 className="search__checkbox" 
                 type="checkbox"
                 checked={filteredShorts}
+                
                 onChange={handleCheckboxChange}
                 id="search__checkbox" 
                 />

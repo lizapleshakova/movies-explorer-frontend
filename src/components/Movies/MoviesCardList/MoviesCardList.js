@@ -11,6 +11,8 @@ import {
   LG_INITIAL_CARD_COUNT,
   MD_INITIAL_CARD_COUNT,
   SM_INITIAL_CARD_COUNT,
+  DESKTOP,
+  TABLET
 } from "../../../utils/constatns";
 
 function MoviesCardList({
@@ -22,8 +24,9 @@ function MoviesCardList({
 }) {
   const { pathname } = useLocation();
 
-  const isDesktop = useMediaQuery("(min-width: 1240px)");
-  const isTablet = useMediaQuery("(min-width: 766px)");
+
+  const isDesktop = useMediaQuery(DESKTOP);
+  const isTablet = useMediaQuery(TABLET);
 
   const cardColumnCount = isDesktop
     ? LG_ROW_CARD_COUNT

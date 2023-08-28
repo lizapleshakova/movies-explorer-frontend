@@ -26,19 +26,16 @@ function MoviesCard({
     isMovieSaved() ? "button movies-card__saved" : ""
   }`;
 
-
   const movieToDelete = () => {
     const savedMovie = sevedMoviesArr.find((movie) => card.id === movie.movieId);
     handleSavedMovieDelete(savedMovie._id);
   };
-
  
   const handleToggleMovie = async () => {
     try {
       isMovieSaved() ? await movieToDelete() : await handleAddMovie(card);
     } catch (err) {
       console.log(`Ошибка получения данных: ${err}`);
-
     } 
   };
 

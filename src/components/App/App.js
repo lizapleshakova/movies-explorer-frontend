@@ -38,6 +38,11 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false); //хранение состояния авторизации
   const [movies, setMovies] = useState([]);
 
+  const [filteredShorts, setFilteredShorts] = useState(
+    JSON.parse(localStorage.getItem("filteredShorts"))
+  );
+  const [filteredSavedShorts, setFilteredSavedShorts] = useState(false);
+
   // Удаление
   const handleSavedMovieDelete = (movieId) => {
     api
@@ -251,6 +256,8 @@ function App() {
                   handleAddMovie={handleAddMovie}
                   handleDeleteMovies={handleDeleteMovies}
                   handleSavedMovieDelete={handleSavedMovieDelete}
+                  filteredShorts={filteredShorts}
+                  setFilteredShorts={setFilteredShorts}
                
                 />
               }
@@ -266,6 +273,8 @@ function App() {
                   sevedMoviesArr={movies}
                   handleDeleteMovies={handleDeleteMovies}
                   handleSavedMovieDelete={handleSavedMovieDelete}
+                  filteredSavedShorts={filteredSavedShorts}
+                  setFilteredSavedShorts={setFilteredSavedShorts}
                 />
               }
             />
@@ -317,3 +326,4 @@ function App() {
 }
 
 export default App;
+
