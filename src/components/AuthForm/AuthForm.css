@@ -82,6 +82,13 @@
   outline: none;
 }
 
+.auth-form__button_disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+  cursor: auto;
+}
+
+
 .auth-form__button_type-login {
   margin-top: 159px;
 }
@@ -136,6 +143,8 @@
     line-height: normal;
     margin-top: 157px;
   }
+
+  
 
   .auth-form__button_type-login {
     margin-top: 248px;

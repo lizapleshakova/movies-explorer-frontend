@@ -25,6 +25,18 @@
   right: 14px;
   border: none;
 }
+
+.movies-card__saved {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background-image: url(../../../images/saved_btn.svg);
+  background-color:transparent;
+  top: 14px;
+  right: 14px;
+  border: none;
+}
+
 .movies-card__delete {
   position: absolute;
   width: 21px;
@@ -33,6 +45,8 @@
   background-color: transparent;
   top: 14px;
   right: 14px;
+  border: none;
+  outline: none;
  
 }
 

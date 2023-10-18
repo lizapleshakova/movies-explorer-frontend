@@ -1,4 +1,3 @@
-import Header from "../Header/Header";
 import Promo from "../Main/Promo/Promo";
 import NavTab from "../Main/NavTab/NavTab";
 import AboutProject from "./AboutProject/AboutProject";
@@ -10,7 +9,6 @@ import Footer from "../Footer/Footer";
 function Main(loggedIn) {
   return (
     <>
-      <Header loggedIn={!loggedIn} />
       <main className="content">
         <Promo />
         <NavTab />
@@ -20,10 +18,8 @@ function Main(loggedIn) {
         <Portfolio />
       </main>
       <Footer />
-     
     </>
   );
 }
-
 
 export default Main;
